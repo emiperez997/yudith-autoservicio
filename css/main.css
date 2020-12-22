@@ -40,6 +40,11 @@ h2{
     font-size: 40px;
 }
 
+h3{
+    font-family: 'Oleo Script', cursive;
+    font-size: 30px;
+}
+
 h4{
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 25px;
@@ -82,6 +87,11 @@ h4{
 .empresas{
     width: 150px;
     height: auto
+}
+
+.informacion ul{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    list-style-type: circle;
 }
 
 @media(max-width: 700px){
