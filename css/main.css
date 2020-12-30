@@ -73,6 +73,16 @@ h4{
     margin: 5px;
 }
 
+.boton-whatsapp{
+    position: fixed;
+    padding: 15px;
+    width: 100px;
+    height: 100px;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
 .banner{
     width: 100%;
     height: 550px;
