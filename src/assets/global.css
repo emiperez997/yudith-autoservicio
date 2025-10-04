@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap");
+
+@import "tailwindcss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600; /* o 700 para títulos importantes */
+}
+
+body,
+p,
+a,
+li,
+span {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}

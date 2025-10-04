@@ -1,0 +1,69 @@
+---
+import { MenuIcon } from "lucide-react";
+---
+
+<header
+  class="w-full h-auto sm:h-20 bg-gray-800 flex flex-col items-center justify-between py-3 gap-4 transition-all duration-300"
+>
+  <nav class="w-11/12 max-w-7xl flex items-center justify-between">
+    <div class="uppercase flex flex-col items-center">
+      <h1 class="text-[#0056b3] font-bold text-3xl">Yudith</h1>
+      <h2 class="text-gray-400 text-xs">Autoservicio Mayorista</h2>
+    </div>
+
+    <div
+      class="hidden sm:flex space-x-8 font-semibold uppercase text-xs text-gray-400"
+    >
+      <a href="#" class="hover:text-gray-300">Inicio</a>
+      <a href="#" class="hover:text-gray-300">Productos</a>
+      <a href="#" class="hover:text-gray-300">Empresas</a>
+      <a href="#" class="hover:text-gray-300">Contacto</a>
+    </div>
+
+    <div>
+      <button
+        class="sm:hidden p-2 rounded-md bg-blue-800 hover:bg-blue-700 text-gray-400 hover:text-gray-300"
+        aria-label="Menu"
+      >
+        <MenuIcon class="w-6 h-6" />
+      </button>
+    </div>
+  </nav>
+
+  <div
+    class="hidden flex-col font-semibold uppercase text-xs text-gray-400 gap-3 w-full px-6"
+  >
+    <a
+      href="#"
+      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+      >Inicio</a
+    >
+    <a
+      href="#"
+      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+      >Productos</a
+    >
+    <a
+      href="#"
+      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+      >Empresas</a
+    >
+    <a
+      href="#"
+      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+      >Contacto</a
+    >
+  </div>
+</header>
+
+<script>
+  const menuButton = document.querySelector("button");
+  const navLinks = document.querySelector("header > div:last-child");
+
+  if (menuButton && navLinks) {
+    menuButton.addEventListener("click", () => {
+      navLinks.classList.toggle("hidden");
+      navLinks.classList.toggle("flex");
+    });
+  }
+</script>
