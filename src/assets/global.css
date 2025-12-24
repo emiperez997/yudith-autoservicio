@@ -2,21 +2,7 @@
 
 @import "tailwindcss";
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600; /* o 700 para títulos importantes */
-}
-
-body,
-p,
-a,
-li,
-span {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+@theme {
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Open Sans", sans-serif;
 }

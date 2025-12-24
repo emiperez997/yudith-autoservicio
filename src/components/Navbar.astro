@@ -1,67 +1,83 @@
 ---
 import { MenuIcon } from "lucide-react";
+import logo from "../assets/img/logo_white.png";
+import { Image } from "astro:assets";
 ---
 
 <header
-  class="w-full h-auto sm:h-20 bg-gray-800 flex flex-col items-center justify-between py-3 gap-4 transition-all duration-300"
+  class="w-full fixed z-50 h-auto sm:h-24 bg-transparent flex flex-col items-center justify-between py-3 transition-all duration-300"
 >
-  <nav class="w-11/12 max-w-7xl flex items-center justify-between">
-    <div class="uppercase flex flex-col items-center">
-      <h1 class="text-[#0056b3] font-bold text-3xl">Yudith</h1>
-      <h2 class="text-gray-400 text-xs">Autoservicio Mayorista</h2>
+  <nav class="w-full max-w-7xl flex items-center justify-between px-5">
+    <div class="uppercase flex items-center">
+      <Image
+        src={logo}
+        alt="Company Logo"
+        class="w-20 h-auto"
+        loading="eager"
+      />
+      <h2 class="text-center text-white font-bold">
+        Autoservicio <br /> Mayorista
+      </h2>
     </div>
 
-    <div
-      class="hidden sm:flex space-x-8 font-semibold uppercase text-xs text-gray-400"
-    >
+    <div class="hidden md:flex space-x-8 font-semibold text-xs text-gray-400">
       <a href="#" class="hover:text-gray-300">Inicio</a>
       <a href="#" class="hover:text-gray-300">Productos</a>
       <a href="#" class="hover:text-gray-300">Empresas</a>
       <a href="#" class="hover:text-gray-300">Contacto</a>
     </div>
 
-    <div>
-      <button
-        class="sm:hidden p-2 rounded-md bg-blue-800 hover:bg-blue-700 text-gray-400 hover:text-gray-300"
-        aria-label="Menu"
-      >
-        <MenuIcon class="w-6 h-6" />
-      </button>
-    </div>
+    <button
+      class="md:hidden p-2 rounded-md hover:bg-gray-700 text-gray-400 hover:text-gray-300"
+      aria-label="Menu"
+    >
+      <MenuIcon />
+    </button>
   </nav>
 
   <div
-    class="hidden flex-col font-semibold uppercase text-xs text-gray-400 gap-3 w-full px-6"
+    id="navLinks"
+    class="hidden md:hidden flex-col font-semibold uppercase text-xs text-gray-400 gap-3 w-full p-5"
   >
-    <a
-      href="#"
-      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+    <a href="#" class="hover:text-gray-300 hover:border rounded-lg p-2"
       >Inicio</a
     >
-    <a
-      href="#"
-      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+    <a href="#" class="hover:text-gray-300 hover:border rounded-lg p-2"
       >Productos</a
     >
-    <a
-      href="#"
-      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+    <a href="#" class="hover:text-gray-300 hover:border rounded-lg p-2"
       >Empresas</a
     >
-    <a
-      href="#"
-      class="hover:text-gray-300 bg-blue-800 rounded-lg p-2 hover:bg-blue-700"
+    <a href="#" class="hover:text-gray-300 hover:border rounded-lg p-2"
       >Contacto</a
     >
   </div>
 </header>
 
 <script>
+  const header = document.querySelector("header");
+  const title = document.querySelector("header h2");
+  const navbar = document.querySelector("nav");
   const menuButton = document.querySelector("button");
-  const navLinks = document.querySelector("header > div:last-child");
+  const navLinks = document.querySelector("#navLinks");
 
-  if (menuButton && navLinks) {
+  if (menuButton && navLinks && header && navbar && title) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        header.classList.add("bg-gray-700");
+        header.classList.remove("bg-transparent");
+      } else {
+        header.classList.remove("bg-gray-700");
+        header.classList.add("bg-transparent");
+        title.classList.remove("text-gray-800");
+        title.classList.add("text-white");
+      }
+    });
     menuButton.addEventListener("click", () => {
+      header.classList.toggle("bg-gray-700");
+      header.classList.toggle("bg-transparent");
+      navbar.classList.toggle("bg-gray-700");
+      navLinks.classList.toggle("bg-gray-700");
       navLinks.classList.toggle("hidden");
       navLinks.classList.toggle("flex");
     });
