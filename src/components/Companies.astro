@@ -1,5 +1,15 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
+import Marcas from "./shared/Marcas.astro";
+
+const marcas = [
+  { nombre: "Tregar", logo: "/img/logos/tregar.png" },
+  { nombre: "Elegante", logo: "/img/logos/elegante.png" },
+  { nombre: "Pozo", logo: "/img/logos/pozo.png" },
+  { nombre: "La Santiagueña", logo: "/img/logos/la-santiagueña.png" },
+  { nombre: "Nikitos", logo: "/img/logos/nikitos.png" },
+  { nombre: "Benjamin", logo: "/img/logos/benjamin.png" },
+];
 ---
 
 <SectionLayout id="companies" style="bg-[#171717]">
@@ -7,4 +17,6 @@ import SectionLayout from "../layouts/SectionLayout.astro";
   <span slot="description" class="text-gray-300">
     Representamos las marcas más reconocidas del mercado
   </span>
+
+  <Marcas marcas={marcas} />
 </SectionLayout>

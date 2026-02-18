@@ -1,0 +1,28 @@
+---
+interface Marca {
+  nombre: string;
+  logo: string;
+}
+
+interface Props {
+  marcas: Marca[];
+}
+
+const { marcas } = Astro.props;
+---
+
+<div
+  class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto"
+>
+  {
+    marcas.map((marca) => (
+      <div class="bg-white rounded-2xl flex items-center justify-center w-[150px] min-h-[80px] shadow-sm hover:scale-105 transition-transform duration-300">
+        <img
+          src={marca.logo}
+          alt={marca.nombre}
+          class="max-h-10 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+        />
+      </div>
+    ))
+  }
+</div>
