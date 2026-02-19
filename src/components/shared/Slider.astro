@@ -11,6 +11,7 @@ interface Props {
 }
 
 const { slides } = Astro.props;
+import Image from "../Image.astro";
 ---
 
 <div class="relative w-full max-w-4xl mx-auto overflow-hidden md:rounded-xl">
@@ -19,7 +20,7 @@ const { slides } = Astro.props;
     {
       slides.map((slide, i) => (
         <div class="min-w-full">
-          <img
+          <Image
             src={slide.image}
             alt={slide.title}
             class="w-full h-[420px] object-cover block"

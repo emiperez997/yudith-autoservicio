@@ -1,0 +1,20 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  width?: number;
+  height?: number;
+}
+
+const { src, alt, ...attrs } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+// Si la imagen ya tiene protocolo (http/https), no le agregues el base
+// Si es relativa, agrégale el base
+const imageSrc = src.startsWith("http")
+  ? src
+  : `${base}${src.startsWith("/") ? src.slice(1) : src}`;
+---
+
+<img src={imageSrc} alt={alt} {...attrs} />

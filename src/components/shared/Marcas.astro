@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { marcas } = Astro.props;
+import Image from "../Image.astro";
 ---
 
 <div
@@ -16,8 +17,8 @@ const { marcas } = Astro.props;
 >
   {
     marcas.map((marca) => (
-      <div class="bg-white rounded-2xl flex items-center justify-center w-[150px] min-h-[80px] shadow-sm hover:scale-105 transition-transform duration-300">
-        <img
+      <div class="bg-white rounded-2xl flex items-center justify-center w-[150px] min-h-20 shadow-sm hover:scale-105 transition-transform duration-300">
+        <Image
           src={marca.logo}
           alt={marca.nombre}
           class="max-h-10 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
