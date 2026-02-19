@@ -1,0 +1,71 @@
+---
+import { Clock, House, Mail, Phone } from "lucide-react";
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Card from "./shared/Card.astro";
+---
+
+<SectionLayout id="contact">
+  <span slot="title">Contáctanos</span>
+  <span slot="description">
+    Estamos aquí para ayudarte. Contáctanos por cualquiera de estos medios
+  </span>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 w-full max-w-6xl gap-8">
+    <div
+      class="px-5 flex flex-col h-[550px] gap-5 justify-center lg:justify-between w-full"
+    >
+      <h3 class="text-2xl font-bold">Información de Contacto</h3>
+
+      <Card style="p-5 flex flex-row gap-2 items-center">
+        <Mail />
+        <span>
+          <h4 class="text-lg md:text-xl">Email</h4>
+          <p class="text-gray-500">mendoza.eduardo@hotmail.com</p>
+        </span>
+      </Card>
+
+      <Card style="p-5 flex flex-row gap-2 items-center">
+        <Phone />
+        <span>
+          <h4 class="text-lg md:text-xl">Teléfono</h4>
+          <a
+            class="text-gray-500 hover:text-green-800"
+            href="https://api.whatsapp.com/send?phone=5491133375025"
+          >
+            <p>1132472051 / 1133375025</p>
+          </a>
+        </span>
+      </Card>
+
+      <Card style="p-5 flex flex-row gap-2 items-center">
+        <House />
+        <span>
+          <h4 class="text-lg md:text-xl">Dirección</h4>
+          <p class="text-gray-500">Orma 3400</p>
+        </span>
+      </Card>
+
+      <Card style="p-5 flex flex-row gap-2">
+        <Clock className="mt-1" />
+        <span>
+          <h4 class="text-lg md:text-xl">Horario de Atención</h4>
+          <p class="text-gray-500">
+            Martes a Viernes de 9hs a 18hs <br /> Sábados de 9hs a 13hs <br /> Lunes
+            y Domingos cerrado
+          </p>
+        </span>
+      </Card>
+    </div>
+
+    <div class="flex items-center justify-center">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.748570395543!2d-58.39729732354308!3d-34.66105217293385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccc9ffe2e8491%3A0xf543ea73942b8df0!2sOrma%203400%2C%20C1286%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1771303766157!5m2!1ses-419!2sar"
+        width="600"
+        height="550"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</SectionLayout>

@@ -1,0 +1,36 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Slider from "./shared/Slider.astro";
+
+const slides = [
+  {
+    image: "/img/productos/nikitos/prod_1.jpg",
+    title: "Nikitos",
+  },
+  {
+    image: "/img/productos/pozo/prod_2.jpg",
+    title: "Pozo",
+  },
+  {
+    image: "/img/productos/elegante/prod_3.jpg",
+    title: "Elegante",
+  },
+  {
+    image: "/img/productos/la-santiagueña/prod_3.jpg",
+    title: "La Santiagueña",
+  },
+  {
+    image: "/img/productos/tregar/prod_4.jpg",
+    title: "Tregar",
+  },
+];
+---
+
+<SectionLayout id="products">
+  <span slot="title">Nuestros Productos</span>
+  <span slot="description" class="text-gray-600">
+    Descubre nuestra amplia gama de productos para tu negocio
+  </span>
+
+  <Slider slides={slides} />
+</SectionLayout>

@@ -1,0 +1,45 @@
+---
+import { Package, TrendingUp, Users } from "lucide-react";
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Card from "./shared/Card.astro";
+---
+
+<SectionLayout>
+  <span slot="title">Tenemos todo lo que necesitas</span>
+  <span slot="description">
+    Distribuidora mayorista con más de dos décadas de experiencia en el mercado
+  </span>
+
+  <div class="grid grid-cols-1 lg:grid-cols-3 max-w-7xl p-5 gap-10">
+    <Card style="p-5 w-[300px]">
+      <h2 class="text-5xl text-gray-500 font-heading">01</h2>
+      <Package className="w-16 h-16 text-gray-500" />
+      <h3 class="font-heading text-xl font-bold mb-4">Variedad de Productos</h3>
+      <p class="text-gray-600">
+        Amplio catálogo de productos para satisfacer todas tus necesidades
+        comerciales.
+      </p>
+    </Card>
+
+    <Card style="p-5 w-[300px]">
+      <h2 class="text-5xl text-gray-500 font-heading">02</h2>
+      <TrendingUp className="w-16 h-16 text-gray-500" />
+      <h3 class="font-heading text-xl font-bold mb-4">Precios Competitivos</h3>
+      <p class="text-gray-600">
+        Ofertas y promociones constantes para que tu negocio sea más rentable.
+      </p>
+    </Card>
+
+    <Card style="p-5 w-[300px]">
+      <h2 class="text-5xl text-gray-500 font-heading">03</h2>
+      <Users className="w-16 h-16 text-gray-500" />
+      <h3 class="font-heading text-xl font-bold mb-4">
+        Atención Personalizada
+      </h3>
+      <p class="text-gray-600">
+        Más de 20 años de experiencia brindando el mejor servicio a nuestros
+        clientes.
+      </p>
+    </Card>
+  </div>
+</SectionLayout>

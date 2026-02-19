@@ -1,0 +1,9 @@
+---
+const { style, transition = true } = Astro.props;
+---
+
+<div
+  class={`${transition ? "transition-all hover:scale-105" : ""} border border-[#d3d8de] rounded-lg shadow-lg flex flex-col gap-4 ${style}`}
+>
+  <slot />
+</div>
