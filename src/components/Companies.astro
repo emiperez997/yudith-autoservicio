@@ -1,15 +1,14 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
 import Marcas from "./shared/Marcas.astro";
-const { base } = Astro.site ? import.meta.env : { base: "" };
 
 const marcas = [
-  { nombre: "Tregar", logo: `${base}/img/logos/tregar.png` },
-  { nombre: "Elegante", logo: `${base}/img/logos/elegante.png` },
-  { nombre: "Pozo", logo: `${base}/img/logos/pozo.png` },
-  { nombre: "La Santiagueña", logo: `${base}/img/logos/la-santiagueña.png` },
-  { nombre: "Nikitos", logo: `${base}/img/logos/nikitos.png` },
-  { nombre: "Benjamin", logo: `${base}/img/logos/benjamin.png` },
+  { nombre: "Tregar", logo: "/img/logos/tregar.png" },
+  { nombre: "Elegante", logo: "/img/logos/elegante.png" },
+  { nombre: "Pozo", logo: "/img/logos/pozo.png" },
+  { nombre: "La Santiagueña", logo: "/img/logos/la-santiagueña.png" },
+  { nombre: "Nikitos", logo: "/img/logos/nikitos.png" },
+  { nombre: "Benjamin", logo: "/img/logos/benjamin.png" },
 ];
 ---
 

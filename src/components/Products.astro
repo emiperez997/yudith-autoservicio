@@ -1,27 +1,26 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
 import Slider from "./shared/Slider.astro";
-const { base } = Astro.site ? import.meta.env : { base: "" };
 
 const slides = [
   {
-    image: `${base}/img/productos/nikitos/prod_1.jpg`,
+    image: "/img/productos/nikitos/prod_1.jpg",
     title: "Nikitos",
   },
   {
-    image: `${base}/img/productos/pozo/prod_2.jpg`,
+    image: "/img/productos/pozo/prod_2.jpg",
     title: "Pozo",
   },
   {
-    image: `${base}/img/productos/elegante/prod_3.jpg`,
+    image: "/img/productos/elegante/prod_3.jpg",
     title: "Elegante",
   },
   {
-    image: `${base}/img/productos/la-santiagueña/prod_3.jpg`,
+    image: "/img/productos/la-santiagueña/prod_3.jpg",
     title: "La Santiagueña",
   },
   {
-    image: `${base}/img/productos/tregar/prod_4.jpg`,
+    image: "/img/productos/tregar/prod_4.jpg",
     title: "Tregar",
   },
 ];
