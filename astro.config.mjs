@@ -11,4 +11,6 @@ export default defineConfig({
   },
 
   integrations: [react()],
+  site: "https://emiperez997.github.io",
+  base: "/yudith-autoservicio",
 });
