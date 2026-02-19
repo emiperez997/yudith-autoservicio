@@ -1,26 +1,27 @@
 ---
 import SectionLayout from "../layouts/SectionLayout.astro";
 import Slider from "./shared/Slider.astro";
+const base = import.meta.env.BASE_URL;
 
 const slides = [
   {
-    image: "/img/productos/nikitos/prod_1.jpg",
+    image: `${base}img/productos/nikitos/prod_1.jpg`,
     title: "Nikitos",
   },
   {
-    image: "/img/productos/pozo/prod_2.jpg",
+    image: `${base}img/productos/pozo/prod_2.jpg`,
     title: "Pozo",
   },
   {
-    image: "/img/productos/elegante/prod_3.jpg",
+    image: `${base}img/productos/elegante/prod_3.jpg`,
     title: "Elegante",
   },
   {
-    image: "/img/productos/la-santiagueña/prod_3.jpg",
+    image: `${base}img/productos/la-santiagueña/prod_3.jpg`,
     title: "La Santiagueña",
   },
   {
-    image: "/img/productos/tregar/prod_4.jpg",
+    image: `${base}img/productos/tregar/prod_4.jpg`,
     title: "Tregar",
   },
 ];
